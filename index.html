@@ -1,178 +1,181 @@
 <!DOCTYPE html>
 <html lang="zh">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>肖宇翔的主页</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Microsoft YaHei', sans-serif;
-            line-height: 1.6;
-            color: #333;
-        }
-
-        nav {
-            background-color: #1e3d59;
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-        }
-
-        nav ul li {
-            margin: 0 1.5rem;
-        }
-
-        .profile-section {
-            display: grid;
-            grid-template-columns: 300px 1fr;
-            gap: 2rem;
-            align-items: start;
-        }
-
-        .profile-photo {
-            width: 100%;
-            max-width: 280px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-        }
-
-        .profile-content {
-            padding: 1rem;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1rem;
-            padding: 0.5rem 1rem;
-            border-radius: 4px;
-        }
-
-        nav ul li a:hover {
-            background-color: #2e4d69;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 80px auto 0;
-            padding: 2rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-            padding: 2rem;
-            background-color: white;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        h1 {
-            color: #1e3d59;
-            margin-bottom: 1rem;
-        }
-
-        h2 {
-            color: #1e3d59;
-            margin-bottom: 1rem;
-            border-bottom: 2px solid #1e3d59;
-            padding-bottom: 0.5rem;
-        }
-
-        .education-item, .project-item {
-            margin-bottom: 1.5rem;
-        }
-
-        .contact-info {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1rem;
-        }
-
-        .contact-item {
-            padding: 1rem;
-            background-color: #f5f5f5;
-            border-radius: 4px;
-        }
-    </style>
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <nav>
-        <ul>
-            <li><a href="index.html">关于我</a></li>
-            <li><a href="pages/education.html">教育背景</a></li>
-            <li><a href="pages/notes.html">课程笔记</a></li>
-            <li><a href="pages/projects.html">项目经历</a></li>
-            <li><a href="pages/contact.html">联系方式</a></li>
-        </ul>
+      <ul>
+        <li><a href="index.html">关于我</a></li>
+        <li><a href="pages/education.html">教育背景</a></li>
+        <li><a href="pages/notes.html">课程笔记</a></li>
+        <li><a href="pages/projects.html">项目经历</a></li>
+        <li><a href="pages/contact.html">联系方式</a></li>
+      </ul>
     </nav>
 
     <div class="container">
-        <section id="about-and-education" class="two-column-section">
-            <div class="left-column">
-                <h1>个人简介</h1>
-                <div class="profile-section">
-                    <div>
-                        <img src="../images/profile.jpg" alt="个人照片" class="profile-photo">
-                    </div>
-                    <div class="profile-content">
-                        <p>您好！我是一名就读于华东理工大学数学学院信息与计算科学专业的大三学生，名叫肖宇翔，来自福建宁德。</p>
-                    </div>
-                </div>
+      <div class="two-column-section">
+        <div class="left-column panel">
+          <h1>个人简介</h1>
+          <div class="profile-section">
+            <div class="profile-photo-container">
+              <img
+                src="images/profile.jpg"
+                alt="个人照片"
+                class="profile-photo"
+              />
             </div>
-            <div class="right-column">
-                <h1>教育背景</h1>
-                <div class="education-item">
-                    <h3>信息与计算科学 学士学位</h3>
-                    <p>华东理工大学数学学院 | 2020-2024</p>
-                    <p>主要课程：数学分析、高等代数、概率论、数值分析等</p>
-                </div>
+            <div class="profile-content">
+              <p>
+                您好！我是肖宇翔，就读于华东理工大学数学学院信息与计算科学专业的大三学生，来自福建宁德。
+              </p>
+              <p>
+                我对数学建模与人工智能充满热情，尤其在数据分析和算法设计方面有浓厚的兴趣。
+              </p>
+              <p>
+                在校期间，我作为第一作者撰写了一篇关于时间序列预测的论文，入选了全国本科生统计
+                论坛；两人组队，参加美国大学生数学建模竞赛，获得Finalist奖项（特等奖提名
+                奖，全球2%）；主持或参与了脑机拼写系统、音乐游戏玩家聚类分析等若干数据
+                挖掘与分析类的省市级科研项目，积累了相关科研经验，希望攻读研究生进一步深造。
+              </p>
+              <div style="text-align: center">
+                <a href="myCV/简历.pdf" class="cv-link">查看我的简历</a>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+        <div class="right-column panel">
+          <h1>教育背景</h1>
+          <div class="education-details">
+            <div class="academic-info">
+              <h3>华东理工大学 数学学院 信息与计算科学</h3>
+              <p class="ranking">成绩排名：1 / 28</p>
+              <p class="courses">
+                主修课程：概率论(99)、实变函数(99)、高等代数下(99)
+                、信息论基础(98)、泛函分析(96)、复变函数(96)、数理统计(
+                95)、人工智能与深度学习(95)、运筹学(92)、数学分
+                析中(92)、常微分方程(92)、空间解析几何(92)
+              </p>
+            </div>
 
-        <section id="notes">
-            <h2>课程笔记</h2>
+            <div class="skills-section">
+              <h3>英语水平</h3>
+              <p class="language">大学英语四级（CET-4）：552分</p>
+              <p class="language">大学英语六级（CET-6）：538分</p>
+              <div class="skill-category">
+                <h3>编程技能</h3>
+                <p>上海市高等学校信息技术水平考试二级优秀</p>
+                <p>熟悉LaTeX、Python、MATLAB、R语言等工具</p>
+                <p>熟悉Office相关技能</p>
+                <p>熟悉使用大语言模型辅助编程</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="achievements-panel panel">
+        <h2>获奖经历</h2>
+        <div class="achievements-grid">
+          <div class="achievement-category">
+            <h3>论文类</h3>
             <ul>
-                <li>数学分析学习笔记</li>
-                <li>线性代数重要定理总结</li>
-                <li>数值计算方法笔记</li>
+              <li>全国高校本科生统计论坛优秀论文奖（中国人民大学统计学院）</li>
+              <li>
+                2025年美国大学生数学建模竞赛Finalist（特等奖提名奖，全球2%）
+              </li>
+              <li>2024年“华数杯”全国大学生数学建模竞赛本科生组二等奖</li>
             </ul>
-        </section>
+          </div>
+          <div class="achievement-category">
+            <h3>交叉学科类</h3>
+            <ul>
+              <li>2024年世界机器人大赛北京锦标赛技能赛一等奖</li>
+              <li>第十一届全国大学生能源经济学术创意大赛上海市一等奖</li>
+              <li>第十四届“挑战杯”大学生创业计划竞赛上海市铜奖</li>
+              <li>2023年“知行杯”大学生社会实践大赛上海市一等奖</li>
+            </ul>
+          </div>
+          <div class="achievement-category">
+            <h3>荣誉奖项</h3>
+            <ul>
+              <li>国家奖学金</li>
+              <li>阿科玛奖学金（全校2人）</li>
+              <li>特等奖学金（专业1人）</li>
+              <li>校大学生年度人物提名</li>
+              <li>校优秀学生、优秀共青团干部</li>
+            </ul>
+          </div>
+        </div>
+      </div>
 
-        <section id="projects">
-            <h2>项目经历</h2>
-            <div class="project-item">
-                <h3>项目名称</h3>
-                <p>项目描述...</p>
-            </div>
-        </section>
+      <div class="projects-panel panel">
+        <h2>项目经历</h2>
+        <div class="projects-grid">
+          <div class="project-item">
+            <h3>
+              Crude Oil Price Forecasting: Leveraging CELMDAN and Intelligent
+              Optimi zation Algorithm for Informed Environmental Policy-Making
+            </h3>
+            <p style="text-indent: 2em">
+              本研究提出了完整集成自适应噪声局部均值分解算法，缓解了传统算法模态混叠、端点效应等问题。针对灰狼算法易陷入局部最优等缺陷，引入两种前期随机探索模式，构造非线性随机因子和动态权重，将新优化算法引入ARMA与SVR参数优化中，应用于短期与长期记忆乘积函数的预测，集成结果，其RMSE等各项指标显著优于传统模型。五组对比与消融实验证明了模型的优越性。论文已入选全国高校本科生统计论坛（中国人民大学主办），正在Journal
+              of Environmental Management期刊投稿。
+            </p>
+          </div>
+          <div class="project-item">
+            <h3>基于FBCCA算法的脑机智能中文联想拼写系统（上海市级大创）</h3>
+            <p style="text-indent: 2em">
+              项目内容：设计了一套为残障人群沟通服务的SSVEP -
+              BCI智能中文联想拼写系统，系统采用基于滤波器组典型相关分析方法（FBCCA），通过脑机接口实现中文拼写。项目被评为上海市级大学生创新项目。
+            </p>
+            <p style="text-indent: 2em">
+              主要贡献：使用Python实现处理脑电信号的基于滤波器组典型相关分析（FBCCA）方法，通过滤波器组处理信号，将不同电极的脑电信号分解为不同频带，将不同电极的脑电信号各频带与参考信号典型相关分析的结果按特定权重求和处理，取求和评分最大者为目标字符。新算法相比传统方法准确性提升13%。
+            </p>
+          </div>
+          <div class="project-item">
+            <h3>基于聚类分析的非遗音乐游戏设计与开发</h3>
+            <p style="text-indent: 2em">
+              项目内容：运用聚类算法划分音乐游戏六种玩家类型，基于Unity开发音游《乐动世遗城》。项目获CCTV等媒体报道，获“知行杯”大学生实践大赛上海市一等奖、“挑战杯”创业计划竞赛上海市铜奖。
+            </p>
+            <p style="text-indent: 2em">
+              主要贡献：1. 运用DBSCAN等聚类算法，独立完成用户数据读取、聚类分析与结果可视化；2. 使用Unity开发游戏主界面，实现用户交互的识别与反馈机制，根据玩家滑动模式识别执行操作并提供反馈效果。
+            </p>
+          </div>
+                    <div class="project-item">
+            <h3>……（正在酝酿）</h3>
+            <p style="text-indent: 2em">
+              
+            </p>
+            <p style="text-indent: 2em">
+            </p>
+          </div>
+        </div>
+      </div>
 
-        <section id="contact">
-            <h2>联系方式</h2>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <h3>邮箱</h3>
-                    <p>your.email@example.com</p>
-                </div>
-                <div class="contact-item">
-                    <h3>GitHub</h3>
-                    <p>github.com/yourusername</p>
-                </div>
-            </div>
-        </section>
+      <div class="contact-panel panel">
+        <h2>联系方式</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <i class="contact-icon email-icon"></i>
+            <h3>邮箱</h3>
+            <p><a href="mailto:22012573@mail.ecust.edu.cn">22012573@mail.ecust.edu.cn</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="contact-icon github-icon"></i>
+            <h3>电话</h3>
+            <p><a href="tel:021-13916043632">021-13916043632</a></p>
+          </div>
+          <div class="contact-item">
+            <i class="contact-icon location-icon"></i>
+            <h3>目前所在地</h3>
+            <p><a href="https://map.gaode.com/place/B0FFF3LXZR" target="_blank">上海市奉贤区海思路999号华东理工大学（奉贤校区）</a></p>
+          </div>
+        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

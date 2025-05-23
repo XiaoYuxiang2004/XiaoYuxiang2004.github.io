@@ -54,16 +54,23 @@ nav ul li a:hover {
 
 /* 各个部分样式 */
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding: 2rem;
     background-color: white;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-h1, h2 {
+h1, h2, h3 {
     color: #1e3d59;
     margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+h1 {
+    font-size: 1.8rem;
+    border-bottom: 2px solid #1e3d59;
+    padding-bottom: 0.8rem;
 }
 
 h2 {
@@ -89,18 +96,184 @@ h2 {
     border-radius: 4px;
 }
 
-/* 两列布局样式 */
+/* 面板样式 */
+.panel {
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border: 1px solid #eaeaea;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.panel:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* 个人简介样式 */
+.profile-section {
+    position: relative;
+}
+
+.profile-photo-container {
+    float: left;
+    margin-right: 2rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.profile-photo {
+    width: 116.94px;
+    height: 170.1px;
+    border-radius: 10%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    border: 1px solid white;
+    transition: transform 0.3s ease;
+    display: block;
+} 
+
+.profile-photo:hover {
+    transform: scale(1.05);
+}
+
+.profile-content {
+    text-align: left;
+}
+
+.profile-content p {
+    text-indent: 2em;
+    margin-bottom: 0.8rem;
+}
+
+/* 清除浮动 */
+.profile-section::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.cv-link {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: #1e3d59;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease;
+}
+
+.cv-link:hover {
+    background-color: #2e4d69;
+}
+
+/* 成就展示样式 */
+.achievements-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 1rem 0;
+}
+
+.achievement-category {
+    background-color: #f8f9fa;
+    padding: 1.5rem;
+    border-radius: 10px;
+    border: 1px solid #eee;
+}
+
+.achievement-category h3 {
+    color: #1e3d59;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    font-size: 1.3rem;
+}
+
+.achievement-category ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.achievement-category li {
+    margin-bottom: 0.8rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.achievement-category li::before {
+    content: "•";
+    color: #1e3d59;
+    position: absolute;
+    left: 0;
+}
+
+/* 项目展示样式 */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.project-item {
+    background: linear-gradient(to bottom right, #ffffff, #f8f9fa);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-5px);
+}
+
+.project-tech {
+    margin-top: 1rem;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* 联系方式样式 */
+.contact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.contact-item:hover {
+    transform: translateY(-5px);
+}
+
+.contact-icon {
+    font-size: 2rem;
+    color: #1e3d59;
+    margin-bottom: 1rem;
+}
+
+/* 调整两列布局样式 */
 .two-column-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     align-items: start;
+    margin-bottom: 2rem;
 }
 
 .left-column, .right-column {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eaeaea;
     height: 100%;
 }
 
@@ -126,4 +299,24 @@ h2 {
 .education-item p {
     margin-bottom: 0.5rem;
     color: #555;
+}
+
+/* 列表样式 */
+ul {
+    list-style-position: inside;
+    padding-left: 1rem;
+}
+
+ul li {
+    margin-bottom: 0.8rem;
+    color: #444;
+}
+
+/* 调整项目和笔记的样式 */
+.project-item, .note-item {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #eee;
 }
