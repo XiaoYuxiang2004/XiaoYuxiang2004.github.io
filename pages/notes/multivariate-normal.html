@@ -14,11 +14,9 @@
             margin-top: 20px;
             min-height: 500px;
         }
-        .note-frame {
+        .pdf-container {
             width: 100%;
             height: calc(100vh - 200px);
-            border: none;
-            border-radius: 8px;
         }
     </style>
 </head>
@@ -37,9 +35,21 @@
         <section>
             <h1>多元统计分析——多元正态分布的定义</h1>
             <div class="note-content">
-                <iframe class="note-frame" src="../../courses_notes/多元正态分布的定义.html"></iframe>
+                <embed src="../../courses_notes/多元正态分布的定义.pdf" type="application/pdf" class="pdf-container">
             </div>
         </section>
     </div>
+
+    <script>
+        // 检查 PDF 是否加载成功
+        window.addEventListener('load', function() {
+            var pdfEmbed = document.querySelector('.pdf-container');
+            if (pdfEmbed) {
+                pdfEmbed.addEventListener('error', function() {
+                    alert('PDF 文件加载失败，请确保您的浏览器支持 PDF 预览。');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
