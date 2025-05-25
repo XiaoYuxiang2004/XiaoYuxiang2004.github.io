@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>学习计划</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">首页</a></li>
+            <li><a href="notes.html">笔记</a></li>
+            <li><a href="projects.html">项目</a></li>
+            <li><a href="contact.html">联系</a></li>
+            <li><a href="education.html">教育背景</a></li>
+            <li><a href="learning-plan.html">学习计划</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="learning-plan">
+            <div class="plan-details">
+                <h1 id="current-date"></h1> <!-- 动态显示当前日期的标题 -->
+                <img src="../plans/learning-plan.png" alt="学习计划">
+            </div>
+        </section>
+    </div>
+
+
+    <script>
+        // 获取今天的日期并格式化为 YYYY-MM-DD
+        const today = new Date();
+        const dateFormatted = today.toISOString().split('T')[0];
+
+        // 更新页面上的日期
+        document.getElementById('current-date').textContent = `今天是 ${dateFormatted}`;
+    </script>
+</body>
+</html>
