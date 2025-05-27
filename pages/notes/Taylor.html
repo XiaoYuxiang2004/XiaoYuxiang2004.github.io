@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishart分布笔记 - 课程笔记</title>
+    <title>常见函数的Taylor级数（x \to 0） - 课程笔记</title>
     <link rel="stylesheet" href="../../css/styles.css">
     <style>
         .note-content {
@@ -20,8 +20,7 @@
         }
     </style>
 </head>
-<body>
-    <nav>
+<body>    <nav>
         <ul>
             <li><a href="../../index.html">首页</a></li>
             <li><a href="../notes.html">笔记</a></li>
@@ -31,11 +30,26 @@
             <li><a href="../learning-plan.html">学习计划</a></li>
         </ul>
     </nav>
+
     <div class="container">
-        <h1>Wishart分布</h1>
-        <div class="note-content">
-            <iframe class="pdf-container" src="../../courses_notes/Wishart 分布.html"></iframe>
-        </div>
+        <section>
+            <h1>数学分析——常见函数的Taylor级数（x \to 0）</h1>
+            <div class="note-content">
+                <embed src="../../courses_notes/数学分析——常见函数的Taylor级数.html" type="application/pdf" class="pdf-container">
+            </div>
+        </section>
     </div>
+
+    <script>
+        // 检查 PDF 是否加载成功
+        window.addEventListener('load', function() {
+            var pdfEmbed = document.querySelector('.pdf-container');
+            if (pdfEmbed) {
+                pdfEmbed.addEventListener('error', function() {
+                    alert('PDF 文件加载失败，请确保您的浏览器支持 PDF 预览。');
+                });
+            }
+        });
+    </script>
 </body>
 </html>
