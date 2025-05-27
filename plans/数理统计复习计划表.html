@@ -1,0 +1,1147 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color: #ffffff; --text-color: #333333; --select-text-bg-color: #B5D6FC; --select-text-font-color: auto; --monospace: "Lucida Console",Consolas,"Courier",monospace; --title-bar-height: 20px; }
+.mac-os-11 { --title-bar-height: 28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+h1, h2, h3, h4, h5 { white-space: pre-wrap; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+thead, tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+svg { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; border-color: transparent !important; padding-top: 0px !important; padding-bottom: 0px !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  #write > p:nth-child(1) { margin-top: 0px; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+  figure { overflow-x: visible; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.reversefootnote { font-family: ui-monospace, sans-serif; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex: 2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; overflow-wrap: anywhere; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+mjx-container { break-inside: avoid; }
+.md-alert.md-alert-note { border-left-color: rgb(9, 105, 218); }
+.md-alert.md-alert-important { border-left-color: rgb(130, 80, 223); }
+.md-alert.md-alert-warning { border-left-color: rgb(154, 103, 0); }
+.md-alert.md-alert-tip { border-left-color: rgb(31, 136, 61); }
+.md-alert.md-alert-caution { border-left-color: rgb(207, 34, 46); }
+.md-alert { padding: 0px 1em; margin-bottom: 16px; color: inherit; border-left: 0.25em solid rgb(0, 0, 0); }
+.md-alert-text-note { color: rgb(9, 105, 218); }
+.md-alert-text-important { color: rgb(130, 80, 223); }
+.md-alert-text-warning { color: rgb(154, 103, 0); }
+.md-alert-text-tip { color: rgb(31, 136, 61); }
+.md-alert-text-caution { color: rgb(207, 34, 46); }
+.md-alert-text { font-size: 0.9rem; font-weight: 700; }
+.md-alert-text svg { fill: currentcolor; position: relative; top: 0.125em; margin-right: 1ch; overflow: visible; }
+.md-alert-text-container::after { content: attr(data-text); text-transform: capitalize; pointer-events: none; margin-right: 1ch; }
+
+
+/* 
+ *     Typora Theme - Lapis    /    Author - YiNN 
+ *     https://github.com/YiNNx/typora-theme-lapis
+ */
+
+:root {
+    --text-color: #40464f;
+    /* Text */
+    --primary-color: #4870ac;
+    /* Primary Color */
+    --bg-color: #ffffff;
+    --side-bar-bg-color: var(--bg-color);
+    /* Background */
+
+    --marker-color: #a2b6d4;
+    /* List Marker */
+    --source-color: #a8a8a9;
+    /* for comment / link source */
+    --highlight-color: #ffffb5c2;
+    /* Highlight */
+    --header-span-color: var(--primary-color);
+    /* h2 Span Color */
+    --block-bg-color: #f6f8fa;
+    /* Block Background */
+    --img-shadow-color: #e3e8f0;
+
+    /* Overwrite of Typora Base Color */
+    --search-hit-bg-color: var(--select-text-bg-color);
+    --search-select-bg-color: #5bb3ff;
+    --control-text-hover-color: #a2b6d4;
+    --rawblock-edit-panel-bd: var(--block-bg-color);
+    --item-hover-bg-color: rgb(246 248 250);
+    --active-file-bg-color: var(--block-bg-color);
+}
+
+@media print {
+    :root {
+        --text-color: rgb(0, 0, 0);
+    }
+
+    .typora-export {
+        margin: 2mm 6mm 0 6mm;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background-color: transparent !important;
+    }
+}
+
+/*
+ * Font-face for Cantarell, Source Han Serif CN and JetBrains Mono
+ */
+
+/*
+ * Basic Style
+ */
+
+#write {
+    max-width: 950px;
+    font-size: 1.1rem;
+    color: var(--text-color);
+    line-height: 1.6;
+    word-spacing: 0px;
+    letter-spacing: 0px;
+    word-break: break-word;
+    word-wrap: break-word;
+    text-align: justify;
+
+    font-family: 'Cantarell', 'SourceHanSerifCN', 'JetBrainsMono';
+    margin-bottom: 20rem;
+}
+
+.searchpanel-search-option-btn {
+    position: absolute;
+    width: 24px;
+    height: 16px;
+    right: 5px;
+    top: 5px;
+    z-index: 99;
+    cursor: pointer;
+    margin-top: 1px;
+    padding: 1px;
+    border-radius: 3px;
+    line-height: 10px;
+    border: 1px solid #ddd;
+    border-color: var(--active-toggle-btn-color);
+}
+
+/* Strong */
+
+#write strong {
+    color: var(--primary-color);
+}
+
+/* Link */
+
+#write a {
+    color: var(--primary-color);
+    /* font-family: "Cantarell"; */
+}
+
+#write .md-p a,
+#write .md-heading a,
+[md-inline=url],
+[md-inline=link]>.md-content {
+    word-wrap: break-word;
+    text-decoration: underline solid;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 1px;
+}
+
+#write h2.md-heading a {
+    text-decoration: underline;
+    border-bottom: 0;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 1.2px;
+}
+
+.md-meta,
+[md-inline=link]>.md-content,
+[md-inline=image]>.md-meta,
+.md-image>.md-meta {
+    word-break: break-all;
+    font-weight: normal;
+    color: var(--source-color);
+    font-family: "JetBrainsMono";
+    font-size: 90%;
+}
+
+
+/* 
+ * TOC
+ */
+
+.md-toc-content {
+    font-family: 'SourceHanSerifCN';
+}
+
+.md-toc-content:empty:before {
+    color: var(--primary-color);
+}
+
+#write div.md-toc-tooltip {
+    font-family: 'SourceHanSerifCN';
+    color: var(--primary-color);
+    position: static;
+    margin-top: 10px;
+    background-color: var(--block-bg-color);
+    line-height: 1.6rem;
+    padding: 0.3rem 0.75rem;
+    border-top: none;
+    /* border-left: 2px solid var(--primary-color);
+     */
+    border-radius: .5rem;
+}
+
+.md-toc:focus .md-toc-content {
+    border-color: var(--bg-color);
+    margin: 9px -1px;
+    margin-top: 9px;
+}
+
+.md-toc .md-toc-content {
+    border-color: var(--bg-color);
+    margin: 10px 0px;
+    margin-top: 10px;
+}
+
+
+/* mark */
+
+mark {
+    background: var(--highlight-color);
+    padding: 1px .15rem;
+    border-radius: 1px;
+    color: inherit;
+}
+
+/* 
+ * Paragraph
+ */
+
+#write+p,
+#write blockquote p {
+    font-size: 1.1rem;
+    padding-top: .2rem;
+    padding-bottom: .2rem;
+    margin: 0;
+    line-height: 1.8rem;
+    color: var(--text-color);
+}
+
+/*
+ * Header
+ */
+
+#write h4,
+#write h5,
+#write h6 {
+    font-weight: normal;
+}
+
+#write h1,
+#write h2,
+#write h3,
+#write h4,
+#write h5,
+#write h6 {
+    font-family: 'SourceHanSerifCN';
+    padding: 0px;
+    color: var(--primary-color);
+}
+
+#write h1 {
+    text-align: center;
+}
+
+#write h2 {
+    padding: 1px 12.5px;
+    border-radius: 4px;
+    display: inline-block;
+}
+
+#write h2,
+#write h2 code {
+    background-color: var(--header-span-color);
+}
+
+#write h2,
+#write h2 a,
+#write h2 code,
+#write h2 strong,
+#write h2 script {
+    color: var(--bg-color);
+}
+
+#write h2 a {
+    border-bottom-color: var(--bg-color) !important;
+}
+
+#write h1 {
+    font-size: 2rem;
+}
+
+#write h2 {
+    font-size: 1.5rem;
+}
+
+#write h3 {
+    font-size: 1.4rem;
+}
+
+#write h4 {
+    font-size: 1.2rem;
+}
+
+#write h5 {
+    font-size: 1.1rem;
+}
+
+#write h6 {
+    font-size: 1.1rem;
+}
+
+#write h1 {
+    padding-top: 0.9rem;
+    margin-bottom: 2.3rem;
+}
+
+#write h2 {
+    margin: .3em 0;
+}
+
+#write h3 {
+    margin: 1em 0 1em;
+}
+
+#write h4 {
+    margin: 0.8em 0 0.8em;
+}
+
+#write h5 {
+    margin: 0.6em 0 0.6em;
+}
+
+#write h6 {
+    margin: 0.4em 0 0.4em;
+}
+
+blockquote h3.md-focus:before,
+blockquote h4.md-focus:before,
+blockquote h5.md-focus:before,
+blockquote h6.md-focus:before {
+    left: -1.3rem;
+}
+
+/*
+ * List
+ */
+
+::marker {
+    font-weight: bold;
+    color: var(--marker-color);
+}
+
+li.md-list-item {
+    margin: 0.4rem 0;
+}
+
+#write ul,
+#write ol {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-left: 20px;
+}
+
+#write ul {
+    list-style-type: disc;
+}
+
+#write em {
+    padding: 0 3px 0 0;
+}
+
+#write ul ul {
+    list-style-type: square;
+}
+
+#write ol {
+    list-style-type: decimal;
+}
+
+#write li section {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    line-height: 1.7rem;
+    text-align: justify;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/*
+ * Quote
+ */
+
+#write blockquote {
+    display: block;
+    font-size: .9em;
+    overflow: auto;
+    border-left: 3px solid var(--primary-color);
+    padding: 15px 30px 15px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: var(--block-bg-color);
+}
+
+.md-alert {
+    display: block;
+    overflow: auto;
+    border-left: 3px solid var(--primary-color);
+    padding: 15px 30px 15px 20px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background: var(--block-bg-color);
+}
+
+.md-alert-text-container {
+    font-size: 1.2em;
+}
+
+.md-alert-text-important {
+    color: #614f9c;
+}
+
+.md-alert.md-alert-important {
+    background-color: #614f9c0a;
+    border-left-color: #614f9c;
+}
+
+.md-alert-text-note {
+    color: #527da8;
+}
+
+.md-alert.md-alert-note {
+    background-color: #527da80a;
+    border-left-color: #527da8;
+}
+
+.md-alert-text-tip {
+    color: #428485;
+}
+
+.md-alert.md-alert-tip {
+    background-color: #4284850a;
+    border-left-color: #428485;
+}
+
+.md-alert-text-warning {
+    color: #a88652;
+}
+
+.md-alert.md-alert-warning {
+    background-color: #9b80490a;
+    border-left-color: #a88652;
+}
+
+
+.md-alert-text-caution {
+    color: #a34f55;
+}
+
+.md-alert.md-alert-caution {
+    background-color: #a34f550a;
+    border-left-color: #a34f55;
+}
+
+
+/*
+ * Inline code
+ */
+
+#write code {
+    color: var(--primary-color);
+    font-size: 94%;
+    font-weight: normal;
+    word-wrap: break-word;
+    padding: 2px 4px 2px;
+    border-radius: 3px;
+    margin: 2px;
+    background-color: var(--block-bg-color);
+    font-family: 'JetBrainsMono';
+    word-break: break-all;
+}
+
+/*
+ * Img
+ */
+
+#write img {
+    margin: 0 auto;
+    max-width: 100%;
+}
+
+#write p>.md-image:only-child:not(.md-img-error) img,
+#write p>img:only-child {
+    filter: drop-shadow(var(--img-shadow-color) 0px 6px 6px);
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+/*
+ * Table
+ */
+#write table {
+    display: table;
+    text-align: justify;
+    overflow-x: auto;
+    border-collapse: collapse;
+    border-spacing: 0px;
+    font-size: 1em;
+    margin: 0px 0px 20px;
+    width: 100%;
+}
+
+#write tbody {
+    border: 0;
+}
+
+#write table tr {
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+#write table tr th,
+#write table tr td {
+    font-size: 1rem;
+    border: 1px solid #d9dfe4;
+    padding: 5px 10px;
+    text-align: justify;
+}
+
+#write table tr th {
+    font-family: SourceHanSerifCN;
+    text-align: center;
+    min-width: 10rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+#write table tr td:hover,
+#write table tr th:hover {
+    background-color: var(--block-bg-color);
+}
+
+table td {
+    min-width: 32px;
+}
+
+.md-table-resize-popover {
+    width: auto !important;
+}
+
+/* Footnote */
+
+sup.md-footnote {
+    background-color: var(--block-bg-color);
+    color: var(--primary-color);
+}
+
+.md-def-name {
+    color: var(--primary-color);
+}
+
+/*
+ * Math Script 
+ */
+
+.md-inline-math script {
+    color: var(--primary-color);
+}
+
+.md-rawblock-control:not(.md-rawblock-tooltip) {
+    background: var(--bg-color);
+    color: var(--md-char-color);
+}
+
+
+.code-tooltip {
+    box-shadow: none;
+}
+
+.md-rawblock-tooltip.md-rawblock-control {
+    border-radius: 1rem;
+}
+
+.md-rawblock .md-rawblock-tooltip {
+    inset: auto 0.3rem auto auto;
+    transform: translateY(-120%);
+}
+
+/* 
+ * Comment
+ */
+.md-comment {
+    color: var(--source-color);
+    opacity: 1;
+    font-family: 'JetBrainsMono';
+}
+
+/*
+ * Dividing line
+ */
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 0;
+    border-top: 2px solid #eef2f5;
+    border-radius: 2px;
+}
+
+/* Checkbox */
+
+#write input[type=checkbox] {
+    width: 0;
+}
+
+.task-list-item input::before {
+    content: "";
+    display: inline-block;
+    width: 1.0125rem;
+    height: 1.0125rem;
+    vertical-align: middle;
+    text-align: center;
+    border: 1px solid var(--marker-color);
+    border-radius: 1.2rem;
+    background-color: #fdfdfd;
+    margin-left: -0.1rem;
+    margin-right: 0.1rem;
+    margin-top: -.6rem;
+}
+
+.task-list-item input:checked::before {
+    content: '✓';
+    font-weight: bold;
+    -webkit-text-stroke: 1px var(--primary-color);
+    color: var(--primary-color);
+    background-color: var(--bg-color);
+    font-size: 0.75rem;
+    line-height: 0.8rem;
+}
+
+blockquote .task-list-item input::before {
+    margin-top: .2rem;
+}
+
+/*
+ * Sidebar
+ */
+#typora-sidebar {
+    font-family: 'Cantarell', 'SourceHanSerifCN';
+    height: 100%;
+    color: var(--text-color);
+    font-size: 0.92rem;
+    background-color: var(--bg-color);
+}
+
+#sidebar-content.sidebar-content {
+    margin-top: .5rem;
+}
+
+.html-for-mac #write input[type=checkbox] {
+    margin-top: 0.65rem;
+}
+
+.html-for-mac #write .task-list-item input::before {
+    margin-top: -.85rem;
+}
+
+
+/*
+ * Sidebar - FileNode
+ */
+
+.active-tab-files #info-panel-tab-file .info-panel-tab-border,
+.active-tab-outline #info-panel-tab-outline .info-panel-tab-border,
+.ty-show-search #info-panel-tab-search .info-panel-tab-border {
+    border-radius: 10px;
+    height: 1px;
+    background-color: var(--primary-color);
+}
+
+.file-node-content {
+    color: var(--primary-color);
+    line-height: 1.6rem;
+}
+
+span.file-node-title-name-part {
+    color: var(--text-color);
+}
+
+span.file-node-title-ext-part {
+    color: var(--text-color);
+}
+
+.file-node-icon {
+    padding-right: 0.2rem;
+}
+
+.file-tree-node.active>.file-node-background {
+    border-left: 4px solid var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+/*
+ * Sidebar - Outline
+ */
+
+#outline-content {
+    height: 100%;
+    overflow-x: hidden;
+    line-height: 1.6rem;
+    font-size: .96rem;
+}
+
+#outline-content .outline-active,
+.pin-outline .outline-active {
+    color: var(--primary-color);
+}
+
+.outline-item {
+    padding-left: 2em;
+}
+
+.outline-item>.outline-expander:before {
+    transform: translateY(-1px) !important;
+}
+
+/* Meta Block */
+
+pre.md-meta-block {
+    font-family: 'JetBrainsMono';
+    color: var(--primary-color);
+    background: #f6f8fa;
+    padding: 1.5rem;
+    margin: -37px 0rem 3.8rem;
+    /* border-radius: 1rem; */
+    filter: drop-shadow(var(--img-shadow-color) 0px 3px 3px);
+    /* border-top: 1px solid var(--primary-color); */
+    /* border-bottom: 1px solid var(--primary-color); */
+}
+
+pre.md-fences-advanced.md-focus .md-fences-adv-panel {
+    border-radius: .8rem;
+}
+
+/*
+ * Scrollbar
+ */
+
+#outline-content::-webkit-scrollbar {
+    width: .5rem;
+}
+
+#file-library::-webkit-scrollbar {
+    width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: rgba(179, 179, 179, 0.425);
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+/* 
+ * Code Block - Style
+ */
+
+.md-fences:before {
+    content: ' ';
+    display: block;
+    width: 100%;
+    background-size: 40px;
+    background-repeat: no-repeat;
+    /* background-color: #282c34; */
+    margin-bottom: -7px;
+    border-radius: 5px;
+    background-position: 10px 10px;
+}
+
+.CodeMirror-wrap .CodeMirror-scroll {
+    overflow-x: auto;
+}
+
+.md-fences .cm-s-inner.CodeMirror {
+    margin: 1.5rem 0;
+}
+
+.cm-s-inner.CodeMirror {
+    padding: 1.2rem .8rem;
+    color: #4f5467;
+    font-family: 'JetBrainsMono';
+    border-radius: 10px;
+    background-color: var(--block-bg-color);
+    /* border: 1px solid #eef2f5;*/
+    line-height: 1.6rem;
+}
+
+.CodeMirror-gutters {
+    border-right: 1px solid #a2b6d452;
+    background: inherit;
+    white-space: nowrap;
+}
+
+pre.CodeMirror-line {
+    padding: 0 1.2rem;
+}
+
+.CodeMirror-linenumber {
+    white-space: nowrap;
+    padding: 0 3px 0 5px;
+    text-align: right;
+    color: var(--primary-color);
+}
+
+/* 
+ * Code Block - Color Scheme
+ */
+
+.cm-s-inner .cm-keyword {
+    color: #1694b6 !important;
+}
+
+.cm-s-inner .cm-operator {
+    color: #2f86d2 !important;
+}
+
+.cm-s-inner .cm-variable,
+.cm-s-inner .cm-builtin,
+.cm-s-inner .cm-header,
+.cm-s-inner .cm-tag,
+.cm-s-inner .cm-property,
+.cm-s-inner .cm-quote {
+    color: #b9218e !important;
+}
+
+.cm-s-inner .cm-variable-2 {
+    color: #7aadad !important;
+}
+
+.cm-s-inner .cm-variable-3,
+.cm-s-inner .cm-type,
+.cm-s-inner .cm-atom {
+    color: #378ed8 !important;
+}
+
+.cm-s-inner .cm-number {
+    color: #1a5494 !important;
+}
+
+.cm-s-inner .cm-def,
+.cm-s-inner .cm-qualifier {
+    color: #0744ac !important;
+}
+
+.cm-s-inner .cm-string {
+    color: #6f42c2 !important;
+}
+
+.cm-s-inner .cm-string-2 {
+    color: #27638f !important;
+}
+
+.cm-s-inner .cm-comment {
+    color: #9a9a9a !important;
+}
+
+.cm-s-inner .cm-meta {
+    color: #0b93be !important;
+}
+
+.cm-s-inner .cm-attribute {
+    color: #8f6aa8 !important;
+}
+
+.cm-s-inner .cm-error {
+    color: rgba(255, 255, 255, 1) !important;
+    background-color: #b9218e40 !important;
+}
+
+.cm-s-inner .CodeMirror-matchingbracket {
+    text-decoration: underline;
+    color: white !important;
+}
+
+.CodeMirror div.CodeMirror-cursor {
+    border-left: 1px solid var(--primary-color);
+    z-index: 3;
+}
+
+.cm-s-inner div.CodeMirror-selected {
+    background: rgba(167, 178, 189, 0.2) !important;
+}
+
+.cm-s-inner.CodeMirror-focused div.CodeMirror-selected {
+    background: rgba(167, 178, 189, 0.2) !important;
+}
+
+.cm-s-inner .CodeMirror-selected,
+.cm-s-inner .CodeMirror-selectedtext {
+    background-color: rgba(167, 178, 189, 0.0) !important;
+}
+
+.cm-s-inner .CodeMirror-line::-moz-selection,
+.cm-s-inner .CodeMirror-line>span::-moz-selection,
+.cm-s-inner .CodeMirror-line>span>span::-moz-selection {
+    background-color: rgba(167, 178, 189, 0.2);
+}
+
+.cm-s-inner .CodeMirror-line::selection,
+.cm-s-inner .CodeMirror-line>span::selection,
+.cm-s-inner .CodeMirror-line>span>span::selection {
+    background-color: rgba(167, 178, 189, 0.2);
+}
+
+.md-rawblock .md-rawblock-tooltip {
+    inset: auto 0.3rem auto auto;
+    transform: translateY(-120%);
+}
+
+/*
+ * Sitting - Unibody
+ */
+
+.megamenu-menu-header {
+    border: none;
+    color: var(--text-color);
+}
+
+.megamenu-menu-header #megamenu-back-btn,
+.megamenu-menu-header .megamenu-menu-header-title-back,
+.megamenu-menu-header .megamenu-menu-header-title-menu {
+    color: var(--text-color);
+}
+
+.megamenu-menu {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: none !important;
+}
+
+header,
+#megamenu-content {
+    background-color: var(--bg-color);
+    background-image: none !important;
+}
+
+.md-search-hit {
+    background-color: var(--search-hit-bg-color);
+}
+
+#recent-file-panel tbody tr:nth-child(2n-1) {
+    background-color: var(--recent-file-panel-n-bg-color);
+    color: var(--recent-file-panel-n-color);
+}
+
+.export-detail,
+.export-item.active,
+.export-items-list-control {
+    width: 75%;
+}
+
+
+</style><title>数理统计复习计划表</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h1 id='数理统计复习计划表'><strong><span>数理统计复习计划表</span></strong></h1><figure class='table-figure'><table><thead><tr><th style='text-align:left;' ><strong><span>时间 </span></strong></th><th style='text-align:left;' ><strong><span>章节/主题</span></strong></th><th style='text-align:left;' ><strong><span>核心学习内容与目标</span></strong></th><th style='text-align:left;' ><strong><span>任务与侧重</span></strong></th><th style='text-align:left;' ><strong><span>备注</span></strong></th></tr></thead><tbody><tr><td style='text-align:left;' ><span>Day 1</span></td><td style='text-align:left;' ><strong><span>§5.1 总体与样本</span></strong></td><td style='text-align:left;' ><span>5.1.1 总体与个体，5.1.2 样本；理解基本概念：总体、个体、样本、简单随机样本、样本容量。</span></td><td style='text-align:left;' ><span>阅读教材，理解定义，做笔记。</span></td><td style='text-align:left;' ><span>区分概念，打好基础。</span></td></tr><tr><td style='text-align:left;' ><span>Day 2</span></td><td style='text-align:left;' ><span>§5.1 (继续) &amp; </span><strong><span>习题5.1</span></strong></td><td style='text-align:left;' ><span>巩固概念，理解样本的两重性。</span></td><td style='text-align:left;' ><span>完成习题5.1，检查理解程度。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 3</span></td><td style='text-align:left;' ><strong><span>§5.2 样本数据的整理与显示</span></strong></td><td style='text-align:left;' ><span>5.2.1 经验分布函数，5.2.2 频数频率表。</span></td><td style='text-align:left;' ><span>理解经验分布函数，掌握频数表制作。</span></td><td style='text-align:left;' ><span>结合实例理解。</span></td></tr><tr><td style='text-align:left;' ><span>Day 4</span></td><td style='text-align:left;' ><span>§5.2 (继续) &amp; </span><strong><span>习题5.2</span></strong></td><td style='text-align:left;' ><span>5.2.3 样本数据的图形显示 (直方图、茎叶图等)。</span></td><td style='text-align:left;' ><span>掌握常用图形的绘制与解读，完成习题5.2。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 5</span></td><td style='text-align:left;' ><strong><span>§5.3 统计量及其分布 (开篇)</span></strong></td><td style='text-align:left;' ><span>5.3.1 统计量与抽样分布；理解统计量的定义，抽样分布的重要性。</span></td><td style='text-align:left;' ><span>重点理解这两个核心概念。</span></td><td style='text-align:left;' ><span>本节内容非常重要。</span></td></tr><tr><td style='text-align:left;' ><span>Day 6</span></td><td style='text-align:left;' ><span>§5.3 (继续)</span></td><td style='text-align:left;' ><span>5.3.2 样本均值及其抽样分布 (均值、方差，正态总体下的分布)。</span></td><td style='text-align:left;' ><span>掌握样本均值的性质和分布。</span></td><td style='text-align:left;' ><span>注意区分总体参数和样本统计量。</span></td></tr><tr><td style='text-align:left;' ><span>Day 7</span></td><td style='text-align:left;' ><span>§5.3 (继续)</span></td><td style='text-align:left;' ><span>5.3.3 样本方差与样本标准差 (计算，正态总体下的分布)。</span></td><td style='text-align:left;' ><span>掌握样本方差的计算和分布。</span></td><td style='text-align:left;' ><span>注意样本方差分母是n-1。</span></td></tr><tr><td style='text-align:left;' ><span>Day 8</span></td><td style='text-align:left;' ><span>§5.3 (继续)</span></td><td style='text-align:left;' ><span>5.3.4 样本矩及其函数 (样本原点矩、中心矩)。</span></td><td style='text-align:left;' ><span>理解样本矩的概念。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 9</span></td><td style='text-align:left;' ><span>§5.3 (继续)</span></td><td style='text-align:left;' ><span>5.3.5 次序统计量及其分布 (极值、中位数等概念)。</span></td><td style='text-align:left;' ><span>理解次序统计量，了解其分布求法。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 10</span></td><td style='text-align:left;' ><span>§5.3 (收尾) &amp; </span><strong><span>习题5.3 (部分)</span></strong></td><td style='text-align:left;' ><span>5.3.6 样本分位数与样本中位数，5.3.7 五数概括与箱线图。</span></td><td style='text-align:left;' ><span>掌握计算和应用，开始做习题5.3。</span></td><td style='text-align:left;' ><span>箱线图是重要的数据可视化工具。</span></td></tr><tr><td style='text-align:left;' ><span>Day 11</span></td><td style='text-align:left;' ><strong><span>习题5.3 (完成)</span></strong><span> &amp; </span><strong><span>§5.4 三大抽样分布 (开篇)</span></strong></td><td style='text-align:left;' ><span>完成习题5.3，订正。5.4.1 χ²分布 (定义、性质、分位数)。</span></td><td style='text-align:left;' ><span>重点掌握χ²分布的来源和应用。</span></td><td style='text-align:left;' ><span>三大分布是统计推断的基石。</span></td></tr><tr><td style='text-align:left;' ><span>Day 12</span></td><td style='text-align:left;' ><span>§5.4 (继续)</span></td><td style='text-align:left;' ><span>5.4.2 F分布 (定义、性质、分位数)。</span></td><td style='text-align:left;' ><span>掌握F分布的来源和应用。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 13</span></td><td style='text-align:left;' ><span>§5.4 (收尾) &amp; </span><strong><span>习题5.4</span></strong></td><td style='text-align:left;' ><span>5.4.3 t分布 (定义、性质、分位数)。</span></td><td style='text-align:left;' ><span>掌握t分布的来源和应用，完成习题5.4。</span></td><td style='text-align:left;' ><span>注意三大分布与正态总体的关系。</span></td></tr><tr><td style='text-align:left;' ><span>Day 14</span></td><td style='text-align:left;' ><strong><span>§5.5 充分统计量</span></strong><span> &amp; </span><strong><span>习题5.5</span></strong></td><td style='text-align:left;' ><span>5.5.1 充分性的概念，5.5.2 因子分解定理。</span></td><td style='text-align:left;' ><span>理解充分统计量的意义，掌握因子分解定理的应用。完成习题5.5。</span></td><td style='text-align:left;' ><span>概念较为抽象，多看例子。</span></td></tr><tr><td style='text-align:left;' ><span>Day 15</span></td><td style='text-align:left;' ><strong><span>第五章 复习与总结</span></strong></td><td style='text-align:left;' ><span>回顾本章所有概念、定理、公式、典型例题。</span></td><td style='text-align:left;' ><span>整理笔记，构建知识框架，解决遗留问题。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 16</span></td><td style='text-align:left;' ><strong><span>§6.1 点估计的概念与无偏性</span></strong></td><td style='text-align:left;' ><span>6.1.1 点估计及无偏性。</span></td><td style='text-align:left;' ><span>理解点估计思想，掌握无偏性的定义和判别。</span></td><td style='text-align:left;' ><span>参数估计是核心内容。</span></td></tr><tr><td style='text-align:left;' ><span>Day 17</span></td><td style='text-align:left;' ><span>§6.1 (继续) &amp; </span><strong><span>习题6.1</span></strong></td><td style='text-align:left;' ><span>6.1.2 有效性 (最小方差无偏估计 UMVUE)。</span></td><td style='text-align:left;' ><span>理解有效性，完成习题6.1。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 18</span></td><td style='text-align:left;' ><strong><span>§6.2 矩估计及相合性</span></strong></td><td style='text-align:left;' ><span>6.2.1 替换原理和矩法估计，6.2.2 概率函数已知时未知参数的矩估计。</span></td><td style='text-align:left;' ><span>掌握矩估计法的步骤和应用。</span></td><td style='text-align:left;' ><span>矩估计是常用的参数估计方法。</span></td></tr><tr><td style='text-align:left;' ><span>Day 19</span></td><td style='text-align:left;' ><span>§6.2 (继续) &amp; </span><strong><span>习题6.2</span></strong></td><td style='text-align:left;' ><span>6.2.3 相合性 (一致性)。</span></td><td style='text-align:left;' ><span>理解相合性的概念和意义，完成习题6.2。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 20</span></td><td style='text-align:left;' ><strong><span>§6.3 最大似然估计与EM算法 (开篇)</span></strong></td><td style='text-align:left;' ><span>6.3.1 最大似然估计 (MLE)。</span></td><td style='text-align:left;' ><span>重点掌握最大似然估计法的思想和步骤，会求解常见分布的MLE。</span></td><td style='text-align:left;' ><span>MLE非常重要，计算量可能较大。</span></td></tr><tr><td style='text-align:left;' ><span>Day 21</span></td><td style='text-align:left;' ><span>§6.3 (继续)</span></td><td style='text-align:left;' ><span>继续练习MLE的求解。</span></td><td style='text-align:left;' ><span>多做不同分布的MLE例题。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 22</span></td><td style='text-align:left;' ><span>§6.3 (收尾) &amp; </span><strong><span>习题6.3</span></strong></td><td style='text-align:left;' ><span>6.3.2 EM算法 (了解思想)，6.3.3 渐近正态性 (了解性质)。</span></td><td style='text-align:left;' ><span>了解EM算法，掌握MLE的渐近性，完成习题6.3。</span></td><td style='text-align:left;' ><span>EM算法一般不要求复杂计算。</span></td></tr><tr><td style='text-align:left;' ><span>Day 23</span></td><td style='text-align:left;' ><strong><span>§6.4 最小方差无偏估计</span></strong></td><td style='text-align:left;' ><span>6.4.1 均方误差 (MSE)，6.4.2 一致最小方差无偏估计 (UMVUE)。</span></td><td style='text-align:left;' ><span>理解MSE，UMVUE的概念。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 24</span></td><td style='text-align:left;' ><span>§6.4 (继续) &amp; </span><strong><span>习题6.4</span></strong></td><td style='text-align:left;' ><span>6.4.3 充分性原则，6.4.4 克拉默-拉奥(C-R)不等式。</span></td><td style='text-align:left;' ><span>理解C-R不等式及其在判断UMVUE中的应用，完成习题6.4。</span></td><td style='text-align:left;' ><span>C-R不等式是衡量估计量好坏的重要工具。</span></td></tr><tr><td style='text-align:left;' ><span>Day 25</span></td><td style='text-align:left;' ><strong><span>§6.5 贝叶斯估计</span></strong></td><td style='text-align:left;' ><span>6.5.1 统计推断的基础, 6.5.2 贝叶斯公式的密度函数形式。</span></td><td style='text-align:left;' ><span>理解贝叶斯思想，掌握贝叶斯公式。</span></td><td style='text-align:left;' ><span>与经典统计思想有所不同。</span></td></tr><tr><td style='text-align:left;' ><span>Day 26</span></td><td style='text-align:left;' ><span>§6.5 (继续) &amp; </span><strong><span>习题6.5</span></strong></td><td style='text-align:left;' ><span>6.5.3 贝叶斯估计，6.5.4 共轭先验分布。</span></td><td style='text-align:left;' ><span>掌握贝叶斯估计的求解，了解共轭先验，完成习题6.5。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 27</span></td><td style='text-align:left;' ><strong><span>§6.6 区间估计 (开篇)</span></strong></td><td style='text-align:left;' ><span>6.6.1 区间估计的概念 (置信水平、置信区间)。</span></td><td style='text-align:left;' ><span>理解区间估计的基本思想和相关概念。</span></td><td style='text-align:left;' ><span>区间估计给出参数的范围。</span></td></tr><tr><td style='text-align:left;' ><span>Day 28</span></td><td style='text-align:left;' ><span>§6.6 (继续)</span></td><td style='text-align:left;' ><span>6.6.2 枢轴量法。</span></td><td style='text-align:left;' ><span>重点掌握利用枢轴量法构造置信区间。</span></td><td style='text-align:left;' ><span>枢轴量法是核心方法。</span></td></tr><tr><td style='text-align:left;' ><span>Day 29</span></td><td style='text-align:left;' ><span>§6.6 (继续)</span></td><td style='text-align:left;' ><span>6.6.3 单个正态总体参数的置信区间 (均值已知/未知方差，方差)。</span></td><td style='text-align:left;' ><span>熟练构造单个正态总体均值和方差的置信区间。</span></td><td style='text-align:left;' ><span>区分不同情况下的枢轴量。</span></td></tr><tr><td style='text-align:left;' ><span>Day 30</span></td><td style='text-align:left;' ><span>§6.6 (继续)</span></td><td style='text-align:left;' ><span>6.6.4 大样本置信区间，6.6.5 样本量的确定。</span></td><td style='text-align:left;' ><span>掌握大样本情况下参数的区间估计。</span></td><td style='text-align:left;' ><span>中心极限定理的应用。</span></td></tr><tr><td style='text-align:left;' ><span>Day 31</span></td><td style='text-align:left;' ><span>§6.6 (收尾) &amp; </span><strong><span>习题6.6</span></strong></td><td style='text-align:left;' ><span>6.6.6 两个正态总体下的置信区间 (均值差，方差比)。</span></td><td style='text-align:left;' ><span>熟练构造两个正态总体参数的置信区间，完成习题6.6。</span></td><td style='text-align:left;' ><span>注意区分独立样本和配对样本。</span></td></tr><tr><td style='text-align:left;' ><span>Day 32</span></td><td style='text-align:left;' ><strong><span>第六章 复习与总结</span></strong></td><td style='text-align:left;' ><span>回顾点估计和区间估计的各种方法、性质、适用条件。</span></td><td style='text-align:left;' ><span>整理笔记，对比不同估计方法的优劣，解决遗留问题。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 33</span></td><td style='text-align:left;' ><strong><span>§7.1 假设检验的基本思想与概念</span></strong></td><td style='text-align:left;' ><span>7.1.1 假设检验问题 (原假设、备择假设)，7.1.2 假设检验的基本步骤。</span></td><td style='text-align:left;' ><span>理解假设检验的逻辑和基本框架。</span></td><td style='text-align:left;' ><span>假设检验是统计推断的另一重要内容。</span></td></tr><tr><td style='text-align:left;' ><span>Day 34</span></td><td style='text-align:left;' ><span>§7.1 (继续) &amp; </span><strong><span>习题7.1</span></strong></td><td style='text-align:left;' ><span>7.1.3 检验的p值，两类错误，显著性水平，检验统计量，拒绝域。</span></td><td style='text-align:left;' ><span>掌握这些核心概念及其关系，完成习题7.1。</span></td><td style='text-align:left;' ><span>p值的理解是重点。</span></td></tr><tr><td style='text-align:left;' ><span>Day 35</span></td><td style='text-align:left;' ><strong><span>§7.2 正态总体参数假设检验 (开篇)</span></strong></td><td style='text-align:left;' ><span>7.2.1 单个正态总体均值的检验 (方差已知/未知)。</span></td><td style='text-align:left;' ><span>掌握单个正态总体均值的U检验和t检验。</span></td><td style='text-align:left;' ><span>与区间估计联系紧密。</span></td></tr><tr><td style='text-align:left;' ><span>Day 36</span></td><td style='text-align:left;' ><span>§7.2 (继续)</span></td><td style='text-align:left;' ><span>7.2.2 假设检验与置信区间的关系，7.2.3 两个正态总体均值差的检验。</span></td><td style='text-align:left;' ><span>理解检验与区间估计的对偶性，掌握两样本均值差的检验。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 37</span></td><td style='text-align:left;' ><span>§7.2 (继续)</span></td><td style='text-align:left;' ><span>7.2.4 成对数据检验，7.2.5 正态总体方差的检验 (单个总体χ²检验，两个总体F检验)。</span></td><td style='text-align:left;' ><span>掌握配对t检验，单个/两个总体方差的检验。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 38</span></td><td style='text-align:left;' ><strong><span>习题7.2</span></strong><span> &amp; </span><strong><span>§7.3 其他分布参数的假设检验</span></strong></td><td style='text-align:left;' ><span>完成习题7.2。7.3.1 指数分布参数的检验, 7.3.2 比率p的检验, 7.3.3 大样本检验。</span></td><td style='text-align:left;' ><span>掌握比率p的检验和大样本检验。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 39</span></td><td style='text-align:left;' ><strong><span>习题7.3</span></strong><span> &amp; </span><strong><span>§7.4 似然比检验与分布拟合检验</span></strong></td><td style='text-align:left;' ><span>完成习题7.3。7.4.1 似然比检验的思想。</span></td><td style='text-align:left;' ><span>理解似然比检验的基本原理。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 40</span></td><td style='text-align:left;' ><span>§7.4 (继续) &amp; </span><strong><span>习题7.4</span></strong></td><td style='text-align:left;' ><span>7.4.2 分类数据的χ²拟合优度检验, 7.4.3 分布的χ²拟合优度检验, 7.4.4 列联表的独立性检验。</span></td><td style='text-align:left;' ><span>重点掌握χ²检验的应用，完成习题7.4。</span></td><td style='text-align:left;' ><span>χ²检验应用广泛。</span></td></tr><tr><td style='text-align:left;' ><span>Day 41</span></td><td style='text-align:left;' ><strong><span>§7.5 正态性检验</span></strong><span> &amp; </span><strong><span>§7.6 非参数检验 (开篇)</span></strong></td><td style='text-align:left;' ><span>7.5.1-7.5.3 (了解W, EP检验)。7.6.1 游程检验, 7.6.2 符号检验。</span></td><td style='text-align:left;' ><span>了解正态性检验方法，掌握符号检验。</span></td><td style='text-align:left;' ><span>非参数检验不依赖总体分布形式。</span></td></tr><tr><td style='text-align:left;' ><span>Day 42</span></td><td style='text-align:left;' ><span>§7.6 (继续) &amp; </span><strong><span>习题7.5, 7.6</span></strong><span> &amp; </span><strong><span>第七章 复习</span></strong></td><td style='text-align:left;' ><span>7.6.3 秩和检验。完成习题7.5, 7.6。回顾本章内容。</span></td><td style='text-align:left;' ><span>掌握秩和检验，整理第七章知识点。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 43</span></td><td style='text-align:left;' ><strong><span>§8.1 方差分析 (ANOVA)</span></strong></td><td style='text-align:left;' ><span>8.1.1 问题的提出, 8.1.2 单因子方差分析的统计模型, 8.1.3 平方和分解。</span></td><td style='text-align:left;' ><span>理解方差分析的思想和模型，掌握平方和分解。</span></td><td style='text-align:left;' ><span>ANOVA用于比较多个总体均值。</span></td></tr><tr><td style='text-align:left;' ><span>Day 44</span></td><td style='text-align:left;' ><span>§8.1 (继续) &amp; </span><strong><span>习题8.1</span></strong></td><td style='text-align:left;' ><span>8.1.4 检验方法 (F检验), 8.1.5 参数估计, 8.1.6 重复数不等情形。</span></td><td style='text-align:left;' ><span>掌握单因子ANOVA的检验步骤和参数估计，完成习题8.1。</span></td><td style='text-align:left;' ><span>注意ANOVA表。</span></td></tr><tr><td style='text-align:left;' ><span>Day 45</span></td><td style='text-align:left;' ><strong><span>§8.2 多重比较</span></strong><span> &amp; </span><strong><span>§8.3 方差齐性检验</span></strong></td><td style='text-align:left;' ><span>8.2.1-8.2.4 (了解T法, S法)。8.3.1-8.3.3 (了解Hartley, Bartlett检验)。</span></td><td style='text-align:left;' ><span>了解多重比较和方差齐性检验的概念和常用方法。</span></td><td style='text-align:left;' ><span>这些是ANOVA的辅助内容。</span></td></tr><tr><td style='text-align:left;' ><span>Day 46</span></td><td style='text-align:left;' ><strong><span>习题8.2, 8.3</span></strong><span> &amp; </span><strong><span>§8.4 一元线性回归 (开篇)</span></strong></td><td style='text-align:left;' ><span>完成习题8.2, 8.3。8.4.1 变量间的两类关系, 8.4.2 一元线性回归模型。</span></td><td style='text-align:left;' ><span>理解回归分析的思想和模型。</span></td><td style='text-align:left;' ><span>回归分析研究变量间关系。</span></td></tr><tr><td style='text-align:left;' ><span>Day 47</span></td><td style='text-align:left;' ><span>§8.4 (继续)</span></td><td style='text-align:left;' ><span>8.4.3 回归系数的最小二乘估计 (LSE)。</span></td><td style='text-align:left;' ><span>重点掌握最小二乘法估计回归系数。</span></td><td style='text-align:left;' ><span>LSE推导和计算。</span></td></tr><tr><td style='text-align:left;' ><span>Day 48</span></td><td style='text-align:left;' ><span>§8.4 (继续)</span></td><td style='text-align:left;' ><span>8.4.4 回归方程的显著性检验 (F检验, t检验)。</span></td><td style='text-align:left;' ><span>掌握回归方程和回归系数的显著性检验。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 49</span></td><td style='text-align:left;' ><span>§8.4 (收尾) &amp; </span><strong><span>习题8.4</span></strong><span> &amp; </span><strong><span>§8.5 一元非线性回归</span></strong></td><td style='text-align:left;' ><span>8.4.5 估计与预测。完成习题8.4。8.5.1-8.5.3 (了解可化为线性的情况)。完成习题8.5。</span></td><td style='text-align:left;' ><span>掌握利用回归方程进行预测，了解非线性回归，完成习题。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 50</span></td><td style='text-align:left;' ><strong><span>第八章 复习与总结</span></strong></td><td style='text-align:left;' ><span>回顾方差分析和回归分析的主要内容、方法和应用。</span></td><td style='text-align:left;' ><span>整理笔记，构建知识框架。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 51</span></td><td style='text-align:left;' ><strong><span>总复习：第五章 &amp; 第六章 (统计量 &amp; 参数估计)</span></strong></td><td style='text-align:left;' ><span>系统回顾这两章的核心概念、公式、定理、主要方法和典型例题。</span></td><td style='text-align:left;' ><span>梳理知识网络，找出薄弱点。</span></td><td style='text-align:left;' ><span>注重知识点之间的联系。</span></td></tr><tr><td style='text-align:left;' ><span>Day 52</span></td><td style='text-align:left;' ><strong><span>总复习：第七章 (假设检验)</span></strong></td><td style='text-align:left;' ><span>系统回顾假设检验的各种方法、步骤、适用条件和p值的理解。</span></td><td style='text-align:left;' ><span>梳理知识网络，找出薄弱点。</span></td><td style='text-align:left;' ><span>注意不同检验方法的选择。</span></td></tr><tr><td style='text-align:left;' ><span>Day 53</span></td><td style='text-align:left;' ><strong><span>总复习：第八章 (ANOVA &amp; 回归)</span></strong></td><td style='text-align:left;' ><span>系统回顾方差分析和回归分析的原理、模型、检验和应用。</span></td><td style='text-align:left;' ><span>梳理知识网络，找出薄弱点。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 54</span></td><td style='text-align:left;' ><strong><span>专题复习：三大分布与抽样分布</span></strong></td><td style='text-align:left;' ><span>深入理解χ², t, F分布的性质、来源、应用场景；样本均值、样本方差等统计量的抽样分布。</span></td><td style='text-align:left;' ><span>针对性练习相关题目。</span></td><td style='text-align:left;' ><span>这是后续推断的基础。</span></td></tr><tr><td style='text-align:left;' ><span>Day 55</span></td><td style='text-align:left;' ><strong><span>专题复习：点估计方法比较</span></strong></td><td style='text-align:left;' ><span>比较矩估计法、最大似然估计法的优缺点、计算步骤和适用性；理解无偏性、有效性、相合性等评价标准。</span></td><td style='text-align:left;' ><span>总结对比，做综合题。</span></td><td style='text-align:left;' >&nbsp;</td></tr><tr><td style='text-align:left;' ><span>Day 56</span></td><td style='text-align:left;' ><strong><span>专题复习：区间估计与假设检验的联系与区别</span></strong></td><td style='text-align:left;' ><span>梳理枢轴量法；理解置信区间与假设检验的对偶关系和各自的侧重点。</span></td><td style='text-align:left;' ><span>对比分析，练习综合应用题。</span></td><td style='text-align:left;' ><span>易混淆点，需清晰辨别。</span></td></tr></tbody></table></figure><p>&nbsp;</p></div></div>
+</body>
+</html>
