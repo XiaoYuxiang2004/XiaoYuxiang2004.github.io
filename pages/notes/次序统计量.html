@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>次序统计量 - 课程笔记</title>
+    <link rel="stylesheet" href="../../css/styles.css">
+    <style>
+        .note-content {
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-top: 20px;
+            min-height: 500px;
+        }
+        .pdf-container {
+            width: 100%;
+            height: calc(100vh - 200px);
+        }
+    </style>
+</head>
+<body>    <nav>
+        <ul>
+            <li><a href="../../index.html">首页</a></li>
+            <li><a href="../education.html">教育背景</a></li>
+            <li><a href="../notes.html">课程笔记</a></li>
+            <li><a href="../projects.html">科研实践</a></li>
+            <li><a href="../contact.html">联系方式</a></li>
+            <li><a href="../learning-plan.html">学习计划</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section>
+            <h1>数理统计——次序统计量</h1>
+            <div class="note-content">
+                <embed src="../../courses_notes/次序统计量.pdf" type="application/pdf" class="pdf-container">
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // 检查 PDF 是否加载成功
+        window.addEventListener('load', function() {
+            var pdfEmbed = document.querySelector('.pdf-container');
+            if (pdfEmbed) {
+                pdfEmbed.addEventListener('error', function() {
+                    alert('PDF 文件加载失败，请确保您的浏览器支持 PDF 预览。');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
